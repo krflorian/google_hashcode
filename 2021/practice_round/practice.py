@@ -49,7 +49,7 @@ def read_data(filename):
 
 # read data
 
-filename = 'a_example'
+filename = 'b_little_bit_of_everything.in'
 problem = read_data(filename)
 
 
@@ -111,14 +111,30 @@ team_stack
 
 #%%
 
+# danach eventuell alle teams nicht satt
+# --> nimm random pizzen so viel wie geht
+# --> nimm teams pizzen weg falls keine mehr da
 
 for team in team_stack:
+    initial_need = team['needs']
+    temp_pizza_stack = [pizza for pizza in pizza_stack]
     while team['needs'] > 0:
-        try:
-            pizza = pizza_stack.pop(0)
-            team['pizzas'].append(pizza)
-            team['needs'] -= 1
-        except: break 
+        pizza = temp_pizza_stack.pop(0)
+        team['pizzas'].append(pizza)
+        team['needs'] -= 1
+        temp_pizza_stack = [p for p in temp_pizza_stack if p['ingredients'] != pizza['ingredients']]
+        if len(temp_pizza_stack) == 0:
+            print("temp leer")
+            break
+
+    if(team['needs'] > 0):
+        team['needs'] = initial_need
+        team['pizzen'] = []
+    else:
+        pizza_stack = [p for p in pizza_stack if p not in team['pizzas']]
+        if not pizza_stack:
+            print("keine pizzen mehr")
+            break
        
 
 team_stack
