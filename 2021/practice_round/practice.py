@@ -22,8 +22,8 @@ def read_data(filename):
     return problem 
 
 
-
-problem = read_data('a_example')
+filename = 'a_example'
+problem = read_data(filename)
 
 
 # %%
@@ -31,10 +31,12 @@ problem = read_data('a_example')
 problem
 
 problem['pizzas_formated'] = []
-for data in problem['pizzas']:
+for i, data in enumerate(problem['pizzas']):
+
     problem['pizzas_formated'].append({
         'number_of_pizzas': int(data[0]),
-        'ingredients': data[1:]
+        'ingredients': data[1:],
+        'id': i
     })
 
 problem['pizzas'] = problem['pizzas_formated']
@@ -55,7 +57,9 @@ pizza_stack = []
 
 for pizza in problem['pizzas']:
     for _ in range(pizza['number_of_pizzas']):
-        pizza_stack.append(pizza['ingredients'])
+        pizza_stack.append({
+            'id': pizza['id'],
+            'ingredients': pizza['ingredients']})
 
 
 pizza_stack = sorted(pizza_stack, key=len, reverse=True)
@@ -98,4 +102,27 @@ for team in team_stack:
 team_stack
 
 
+#%%
 
+# output
+
+teams_served = [team for team in team_stack if team['needs'] == 0]
+
+output = []
+output.append(str(len(teams_served)))
+for team in teams_served:
+    line = str(len(team['pizzas'])) + ' '
+    line += ' '.join([str(pizza['id']) for pizza in team['pizzas']])
+    output.append(line)
+
+
+output
+
+#%%
+
+
+with open('data/output_{}.out'.format(filename), "w") as outfile:
+  outfile.writelines(output)
+
+
+  
