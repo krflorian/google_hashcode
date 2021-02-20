@@ -72,6 +72,24 @@ problem
 
 
 #%%
+import pandas as pd 
+
+pizzas = pd.DataFrame(pizza_stack)
+
+pizzas.set_index('id')
+pizzas
+
+#%%
+
+ingredient_dummies =  pd.get_dummies(pizzas['ingredients'].apply(pd.Series).stack()).sum(level=0)
+pizzas = pizzas.merge(ingredient_dummies, left_index=True, right_index=True)
+
+pizzas['n_ingredients'] = pizzas.apply(lambda x: len(x['ingredients']), axis = 1) 
+
+pizzas
+
+
+#%%
 
 pizza_stack = []
 
