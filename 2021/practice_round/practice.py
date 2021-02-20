@@ -1,6 +1,29 @@
 
 #%%
 
+
+def write_output(filename, output):
+    """
+    writes a list of strings to a .out file
+
+    parameters: 
+        - output: list of strings 
+        - filename: string
+    """
+    
+    filepath = 'data/output_{}.out'.format(filename)
+    print('saving file to {}'.format(filepath))
+    print(output)
+
+    with open(filepath, "w") as outfile:
+        outfile.write("\n".join(output))
+
+    return 
+
+
+
+#%%
+
 def read_data(filename):
     
     pizzas = []
@@ -22,13 +45,17 @@ def read_data(filename):
     return problem 
 
 
+#%%
+
+# read data
+
 filename = 'a_example'
 problem = read_data(filename)
 
 
 # %%
+# setup problem 
 
-problem
 
 problem['pizzas_formated'] = []
 for i, data in enumerate(problem['pizzas']):
@@ -104,21 +131,16 @@ team_stack
 teams_served = [team for team in team_stack if team['needs'] == 0]
 
 output = []
-output.append(str(len(teams_served)) + '\n')
+output.append(str(len(teams_served)))
 for team in teams_served:
     line = str(len(team['pizzas'])) + ' '
     line += ' '.join([str(pizza['id']) for pizza in team['pizzas']])
-    line += '\n'
     output.append(line)
 
 
-output
+write_output(filename, output)
 
 #%%
-
-
-with open('data/output_{}.out'.format(filename), "w") as outfile:
-  outfile.writelines(output)
 
 
   
