@@ -43,23 +43,15 @@ problem['pizzas'] = problem['pizzas_formated']
 del problem['pizzas_formated']
 problem
 
-# %%
-
-
-pizza_count = 0
-for pizza in problem['pizzas']:
-    pizza_count += pizza['number_of_pizzas']
-pizza_count
 
 #%%
 
 pizza_stack = []
 
 for pizza in problem['pizzas']:
-    for _ in range(pizza['number_of_pizzas']):
-        pizza_stack.append({
-            'id': pizza['id'],
-            'ingredients': pizza['ingredients']})
+    pizza_stack.append({
+        'id': pizza['id'],
+        'ingredients': pizza['ingredients']})
 
 
 pizza_stack = sorted(pizza_stack, key=len, reverse=True)
@@ -95,9 +87,12 @@ team_stack
 
 for team in team_stack:
     while team['needs'] > 0:
-        pizza = pizza_stack.pop(0)
-        team['pizzas'].append(pizza)
-        team['needs'] -= 1
+        try:
+            pizza = pizza_stack.pop(0)
+            team['pizzas'].append(pizza)
+            team['needs'] -= 1
+        except: break 
+       
 
 team_stack
 
@@ -109,10 +104,11 @@ team_stack
 teams_served = [team for team in team_stack if team['needs'] == 0]
 
 output = []
-output.append(str(len(teams_served)))
+output.append(str(len(teams_served)) + '\n')
 for team in teams_served:
     line = str(len(team['pizzas'])) + ' '
     line += ' '.join([str(pizza['id']) for pizza in team['pizzas']])
+    line += '\n'
     output.append(line)
 
 
