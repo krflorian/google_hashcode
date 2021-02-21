@@ -49,7 +49,7 @@ def read_data(filename):
 
 # read data
 
-filename = 'b_little_bit_of_everything.in'
+filename = 'd_many_pizzas.in'
 problem = read_data(filename)
 
 
@@ -63,31 +63,12 @@ for i, data in enumerate(problem['pizzas']):
     problem['pizzas_formated'].append({
         'number_of_pizzas': int(data[0]),
         'ingredients': data[1:],
-        'id': i
+        'pizza_id': i
     })
 
 problem['pizzas'] = problem['pizzas_formated']
 del problem['pizzas_formated']
 problem
-
-
-#%%
-import pandas as pd 
-
-pizzas = pd.DataFrame(pizza_stack)
-
-pizzas.set_index('id')
-pizzas
-
-#%%
-
-ingredient_dummies =  pd.get_dummies(pizzas['ingredients'].apply(pd.Series).stack()).sum(level=0)
-pizzas = pizzas.merge(ingredient_dummies, left_index=True, right_index=True)
-
-pizzas['n_ingredients'] = pizzas.apply(lambda x: len(x['ingredients']), axis = 1) 
-
-pizzas
-
 
 #%%
 
@@ -95,12 +76,31 @@ pizza_stack = []
 
 for pizza in problem['pizzas']:
     pizza_stack.append({
-        'id': pizza['id'],
+        'pizza_id': pizza['pizza_id'],
         'ingredients': pizza['ingredients']})
 
 
 pizza_stack = sorted(pizza_stack, key=len, reverse=True)
 pizza_stack
+
+#%%
+import pandas as pd 
+
+pizzas = pd.DataFrame(pizza_stack)
+
+pizzas.set_index('pizza_id')
+pizzas
+
+#%%
+
+ingredient_dummies =  pd.get_dummies(pizzas['ingredients'].apply(pd.Series).stack()).sum(level=0)
+pizzas = pizzas.merge(ingredient_dummies, left_index=True, right_index=True)
+all_ingredients = list(ingredient_dummies.columns)
+pizzas['n_ingredients'] = pizzas.apply(lambda x: len(x['ingredients']), axis = 1) 
+
+pizzas
+
+
 
 #%%
 
@@ -132,25 +132,42 @@ team_stack
 # danach eventuell alle teams nicht satt
 # --> nimm random pizzen so viel wie geht
 # --> nimm teams pizzen weg falls keine mehr da
+from copy import deepcopy
 
 for team in team_stack:
     initial_need = team['needs']
-    temp_pizza_stack = [pizza for pizza in pizza_stack]
+
+    temp_pizzas = deepcopy(pizzas)
+    team['missing_ingredients'] = all_ingredients
     while team['needs'] > 0:
-        pizza = temp_pizza_stack.pop(0)
-        team['pizzas'].append(pizza)
+           
+        #temp_pizzas['score'] = temp_pizzas.apply(lambda x: sum(x[team['missing_ingredients']]) / len(x['ingredients']), axis = 1)
+        #temp_pizzas['score'] = pizzas[team['missing_ingredients']].apply(sum)
+
+        pizza = temp_pizzas.loc[temp_pizzas.apply(lambda x: sum(x[team['missing_ingredients']]) / len(x['ingredients']), axis = 1).idxmax()]
+
+        team['pizzas'].append(pizza['pizza_id'])
+
+        team['missing_ingredients'] = list(set(team['missing_ingredients']) - set(pizza['ingredients'])) 
+
         team['needs'] -= 1
-        temp_pizza_stack = [p for p in temp_pizza_stack if p['ingredients'] != pizza['ingredients']]
-        if len(temp_pizza_stack) == 0:
+
+        # temp_pizza_stack = [p for p in temp_pizza_stack if p['ingredients'] != pizza['ingredients']]
+        temp_pizzas = temp_pizzas.drop(pizza['pizza_id'])
+
+        if temp_pizzas.empty:
             print("temp leer")
             break
 
     if(team['needs'] > 0):
         team['needs'] = initial_need
-        team['pizzen'] = []
+        team['pizzas'] = []
+
+        # missing ing event
     else:
-        pizza_stack = [p for p in pizza_stack if p not in team['pizzas']]
-        if not pizza_stack:
+        pizzas = temp_pizzas
+        # pizza_stack = [p for p in pizza_stack if p not in team['pizzas']]
+        if pizzas.empty:
             print("keine pizzen mehr")
             break
        
@@ -168,7 +185,7 @@ output = []
 output.append(str(len(teams_served)))
 for team in teams_served:
     line = str(len(team['pizzas'])) + ' '
-    line += ' '.join([str(pizza['id']) for pizza in team['pizzas']])
+    line += ' '.join([str(pizza) for pizza in team['pizzas']])
     output.append(line)
 
 
