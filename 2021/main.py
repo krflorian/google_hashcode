@@ -17,7 +17,7 @@ class Car():
         self.id = id
         self.path = path
 
-streets = {}
+streets = []
 cars = []
 
 #%%
@@ -28,7 +28,7 @@ with open('{}.txt'.format(filename), 'r') as infile:
 
     for _ in range(n_streets):
         start, end, name, time_needed = infile.readline().split()
-        streets[name] = Street(int(start), int(end), name, int(time_needed))
+        streets.append(Street(int(start), int(end), name, int(time_needed)))
     for i in range(n_cars):
         car_data = infile.readline().split()
         cars.append(
@@ -68,7 +68,7 @@ for i in range(n_intersections):
 
 for idx in streets:
     streets[idx].start
-    
+
 
 #%%
 
@@ -79,3 +79,24 @@ for idx in streets:
 for step in range(total_duration):
 
 
+#%%
+
+intersections = {}
+for i in range(n_intersections):
+    intersections[i] = {
+        'incoming': 0,
+        'outgoing': 0}
+
+for street in streets: 
+    intersections[street.start]['outgoing'] += 1
+    intersections[street.end]['incoming'].append()
+
+intersections
+
+#%%
+
+schedule = []
+
+for idx in intersections: 
+    if intersections[idx]['incoming'] == 1:
+        schedule.append()
