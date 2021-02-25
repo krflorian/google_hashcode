@@ -144,7 +144,8 @@ for team in team_stack:
         #temp_pizzas['score'] = temp_pizzas.apply(lambda x: sum(x[team['missing_ingredients']]) / len(x['ingredients']), axis = 1)
         #temp_pizzas['score'] = pizzas[team['missing_ingredients']].apply(sum)
 
-        pizza = temp_pizzas.loc[temp_pizzas.apply(lambda x: sum(x[team['missing_ingredients']]) / len(x['ingredients']), axis = 1).idxmax()]
+        pizza = temp_pizzas.loc[temp_pizzas.apply(
+            lambda x: sum(x[team['missing_ingredients']]) / len(x['ingredients']), axis = 1).idxmax()]
 
         team['pizzas'].append(pizza['pizza_id'])
 

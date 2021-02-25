@@ -137,9 +137,6 @@ team_stack
 # --> nimm teams pizzen weg falls keine mehr da
 from copy import deepcopy
 
-
-
-
 def run(team, pizzas=pizzas, all_ingredients=all_ingredients):
     initial_need = team['needs']
     temp_pizzas = deepcopy(pizzas)

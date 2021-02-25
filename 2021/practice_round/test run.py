@@ -13,3 +13,5 @@ end2 = time.time()
 print(f'single-core execution time {end1 - start1}')
 print(f'multi-core execution time {end2 - start2}')
 # %%
+
+

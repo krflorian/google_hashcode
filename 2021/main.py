@@ -2,7 +2,7 @@
 
 #%%
 
-filename = 'a'
+filename = 'e'
 
 
 class Street():
@@ -38,58 +38,25 @@ with open('{}.txt'.format(filename), 'r') as infile:
 cars
 
 #%%
-
-cars[1].__dict__
+"""
 
 for car in cars:
     car.total_duration = sum([streets[idx].time_needed for idx in streets])
 
-
-cars[0].__dict__
-
-# %%
-
-
-class Intersection():
-    def __init__(self, id, schedule):
-        self.id = id
-        self.schedule = [] # (street_name, time)
-
-
-#%%
-
-intersections = []
-for i in range(n_intersections):
-    intersections.append(
-        Intersection(i, []))
-
-
-#%%
-
-for idx in streets:
-    streets[idx].start
-
-
-#%%
-
-
-[i for i in intersections ]
-
-
-for step in range(total_duration):
-
+cars[1].__dict__
+"""
 
 #%%
 
 intersections = {}
 for i in range(n_intersections):
     intersections[i] = {
-        'incoming': 0,
-        'outgoing': 0}
+        'incoming': [],
+        'outgoing': []}
 
 for street in streets: 
-    intersections[street.start]['outgoing'] += 1
-    intersections[street.end]['incoming'].append()
+    intersections[street.start]['outgoing'].append(street)
+    intersections[street.end]['incoming'].append(street)
 
 intersections
 
@@ -97,6 +64,33 @@ intersections
 
 schedule = []
 
+
 for idx in intersections: 
-    if intersections[idx]['incoming'] == 1:
-        schedule.append()
+    if len(intersections[idx]['incoming']) == 1:
+        schedule.append(
+            (idx, intersections[idx]['incoming'][0].name, 1))
+
+schedule
+
+
+#%%
+
+output = []
+output.append(
+    str(len(schedule)))
+
+for s in schedule: 
+    output.append(str(s[0]))
+    output.append('1')
+    output.append(' '.join(map(str, s[1:])))
+
+output
+
+
+#%%
+
+out_filepath = filename + '_out'
+
+with open('{}.txt'.format(out_filepath), "w") as outfile:
+    outfile.write("\n".join(output))
+
