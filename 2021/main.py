@@ -36,7 +36,7 @@ with open('{}.txt'.format(filename), 'r') as infile:
             Car(i, car_data[1:])
         )
 
-cars
+#cars
 
 #%%
 
@@ -44,7 +44,7 @@ streets_dict = {}
 
 for street in streets: 
     streets_dict[street.name] = street.time_needed
-streets_dict
+#streets_dict
 
 
 #%%
@@ -66,7 +66,7 @@ for car in cars:
         'total_duration': car.total_duration
     }, index = [car.id]))
 
-car_values
+#car_values
 
 #%%
 
@@ -77,7 +77,7 @@ car_values = car_values.sort_values('total_duration', ascending = True)
 if len(cars) > 100:
     car_values = car_values.iloc[:int(len(cars)/10)]
 
-car_values
+#car_values
 
 #%%
 
@@ -102,7 +102,7 @@ for street in streets:
     intersections[street.start]['outgoing'].append(street)
     intersections[street.end]['incoming'].append(street)
 
-intersections
+#intersections
 
 #%%
 popularity = {}
@@ -127,6 +127,7 @@ def get_most_popular_street(streets):
 
 schedule = []
 
+importance_factor = 1
 
 for idx in intersections: 
     if len(intersections[idx]['incoming']) == 1:
@@ -140,11 +141,15 @@ for idx in intersections:
         for thing in intersections[idx]['incoming']:
             if thing.name in popularity:
                 dauer_thing = max(1,int(popularity[thing.name]*verhaeltnis_koeff))
-                multi_streets.append((thing.name, dauer_thing))
+                if thing.name in high_value_streets:
+                    dauer_thing += importance_factor
+                    multi_streets.insert(0, (thing.name, dauer_thing))
+                else:
+                    multi_streets.append((thing.name, dauer_thing))
 
         schedule.append((idx, multi_streets))
 
-schedule
+#schedule
 
 
 #%%
@@ -168,6 +173,7 @@ output
 #%%
 
 out_filepath = filename + '_out'
+print('saved', out_filepath)
 
 with open('{}.txt'.format(out_filepath), "w") as outfile:
     outfile.write("\n".join(output))
