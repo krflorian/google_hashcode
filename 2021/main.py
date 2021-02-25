@@ -2,7 +2,7 @@
 
 #%%
 
-filename = 'd'
+filename = 'c'
 
 
 class Street():
@@ -106,14 +106,17 @@ schedule
 #%%
 
 output = []
-output.append(
-    str(len(schedule)))
-
-for s in schedule: 
-    output.append(str(s[0]))
-    output.append(str(len(s[1])))
-    for beautiful_street in s[1]:
-        output.append(' '.join(map(str, beautiful_street)))
+# output.append(
+#     str(len(schedule)))
+counter = 0
+for s in schedule:
+    if len(s[1]) != 0:
+        counter+=1
+        output.append(str(s[0]))
+        output.append(str(len(s[1])))
+        for beautiful_street in s[1]:
+            output.append(' '.join(map(str, beautiful_street)))
+output.insert(0, str(counter))
 
 output
 
