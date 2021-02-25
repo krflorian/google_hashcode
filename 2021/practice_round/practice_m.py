@@ -49,6 +49,7 @@ def read_data(filename):
 
 # read data
 
+#filename = 'd_many_pizzas.in'
 filename = 'e_many_teams.in'
 problem = read_data(filename)
 
@@ -65,6 +66,8 @@ for i, data in enumerate(problem['pizzas']):
         'ingredients': data[1:],
         'pizza_id': i
     })
+
+
 
 problem['pizzas'] = problem['pizzas_formated']
 del problem['pizzas_formated']
@@ -134,13 +137,14 @@ team_stack
 # --> nimm teams pizzen weg falls keine mehr da
 from copy import deepcopy
 
-for team in team_stack:
-    initial_need = team['needs']
 
+
+
+def run(team, pizzas=pizzas, all_ingredients=all_ingredients):
+    initial_need = team['needs']
     temp_pizzas = deepcopy(pizzas)
     team['missing_ingredients'] = all_ingredients
     while team['needs'] > 0:
-           
         #temp_pizzas['score'] = temp_pizzas.apply(lambda x: sum(x[team['missing_ingredients']]) / len(x['ingredients']), axis = 1)
         #temp_pizzas['score'] = pizzas[team['missing_ingredients']].apply(sum)
 
@@ -169,17 +173,38 @@ for team in team_stack:
         # pizza_stack = [p for p in pizza_stack if p not in team['pizzas']]
         if pizzas.empty:
             print("keine pizzen mehr")
-            break
-       
+        return team
+    
+#for team in team_stack:
+#    a = run(team)
+#    print(a) 
+    
 
-team_stack
+# %%
+from multiprocessing import Pool, cpu_count
+
+A = []
+def mycallback(x):
+    A.append(x)
+
+results = []
+
+if __name__ ==  '__main__': 
+    pool = Pool(processes = cpu_count())
+    for team in team_stack:
+        output = pool.apply_async(run, (team, pizzas), callback=mycallback)
+        results.append(output)
+    for r in results:
+        r.wait()
+
+print(A)
 
 
 #%%
 
 # output
 
-teams_served = [team for team in team_stack if team['needs'] == 0]
+teams_served = [team for team in A if team['needs'] == 0]
 
 output = []
 output.append(str(len(teams_served)))
@@ -195,3 +220,4 @@ write_output(filename, output)
 
 
   
+# %%
