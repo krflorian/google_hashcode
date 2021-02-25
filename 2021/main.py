@@ -2,7 +2,7 @@
 
 #%%
 
-filename = 'f'
+filename = 'd'
 
 
 class Street():
@@ -61,6 +61,25 @@ for street in streets:
 intersections
 
 #%%
+popularity = {}
+
+
+def add_to_dict(name: str):
+    global popularity
+    if name in popularity:
+        popularity[name]+=1
+    else:
+        popularity[name] = 1
+
+
+def get_most_popular_street(streets):
+    global popularity
+    for street in streets:
+        [add_to_dict(street.name) for car in cars if street.name in car.path]
+
+    return popularity
+
+#%%
 
 schedule = []
 
@@ -70,10 +89,15 @@ for idx in intersections:
         schedule.append(
             (idx, [(intersections[idx]['incoming'][0].name, 1)]))
     else:
+        popularity = get_most_popular_street(intersections[idx]['incoming'])
+        verhaeltnis_koeff = total_duration/(sum(popularity.values())*10)
         # Raphael explains later
         multi_streets = []
         for thing in intersections[idx]['incoming']:
-            multi_streets.append((thing.name, 1))
+            if thing.name in popularity:
+                dauer_thing = max(1,int(popularity[thing.name]*verhaeltnis_koeff))
+                multi_streets.append((thing.name, dauer_thing))
+
         schedule.append((idx, multi_streets))
 
 schedule

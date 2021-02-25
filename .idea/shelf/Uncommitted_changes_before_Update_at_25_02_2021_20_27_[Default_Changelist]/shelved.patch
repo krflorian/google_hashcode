@@ -1,0 +1,218 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"9aa7c52e-6f17-45da-94ad-55cb1fab21a0\" name=\"Default Changelist\" comment=\"\">\r\n      <change afterPath=\"$PROJECT_DIR$/2020/read.py\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"EXCLUDED_CONVERTED_TO_IGNORED\" value=\"true\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileEditorManager\">\r\n    <leaf>\r\n      <file pinned=\"false\" current-in-tab=\"false\">\r\n        <entry file=\"file://$PROJECT_DIR$/2020/main.ipynb\">\r\n          <provider selected=\"true\" editor-type-id=\"jupyter-editor\" />\r\n        </entry>\r\n      </file>\r\n      <file pinned=\"false\" current-in-tab=\"true\">\r\n        <entry file=\"file://$PROJECT_DIR$/2020/read.py\">\r\n          <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n            <state relative-caret-position=\"201\">\r\n              <caret line=\"15\" lean-forward=\"true\" selection-start-line=\"15\" selection-end-line=\"15\" />\r\n              <folding>\r\n                <element signature=\"e#9#27#0\" expanded=\"true\" />\r\n              </folding>\r\n            </state>\r\n          </provider>\r\n        </entry>\r\n      </file>\r\n      <file pinned=\"false\" current-in-tab=\"false\">\r\n        <entry file=\"file://$PROJECT_DIR$/2020/data/a_example.txt\">\r\n          <provider selected=\"true\" editor-type-id=\"text-editor\" />\r\n        </entry>\r\n      </file>\r\n    </leaf>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Jupyter Notebook\" />\r\n        <option value=\"Python Script\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"IdeDocumentHistory\">\r\n    <option name=\"CHANGED_PATHS\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/2020/main.ipynb\" />\r\n        <option value=\"$PROJECT_DIR$/2020/read.py\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectFrameBounds\" extendedState=\"6\">\r\n    <option name=\"x\" value=\"480\" />\r\n    <option name=\"y\" value=\"261\" />\r\n    <option name=\"width\" value=\"2880\" />\r\n    <option name=\"height\" value=\"1575\" />\r\n  </component>\r\n  <component name=\"ProjectView\">\r\n    <navigator proportions=\"\" version=\"1\">\r\n      <foldersAlwaysOnTop value=\"true\" />\r\n    </navigator>\r\n    <panes>\r\n      <pane id=\"ProjectPane\">\r\n        <subPane>\r\n          <expand>\r\n            <path>\r\n              <item name=\"google_hashcode\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"google_hashcode\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n            <path>\r\n              <item name=\"google_hashcode\" type=\"b2602c69:ProjectViewProjectNode\" />\r\n              <item name=\"google_hashcode\" type=\"462c0819:PsiDirectoryNode\" />\r\n              <item name=\"2020\" type=\"462c0819:PsiDirectoryNode\" />\r\n            </path>\r\n          </expand>\r\n          <select />\r\n        </subPane>\r\n      </pane>\r\n      <pane id=\"Scope\" />\r\n    </panes>\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"nodejs_interpreter_path.stuck_in_default_project\" value=\"undefined stuck path\" />\r\n    <property name=\"nodejs_npm_path_reset_for_default_project\" value=\"true\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.pluginManager\" />\r\n  </component>\r\n  <component name=\"RunDashboard\">\r\n    <option name=\"ruleStates\">\r\n      <list>\r\n        <RuleState>\r\n          <option name=\"name\" value=\"ConfigurationTypeDashboardGroupingRule\" />\r\n        </RuleState>\r\n        <RuleState>\r\n          <option name=\"name\" value=\"StatusDashboardGroupingRule\" />\r\n        </RuleState>\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"9aa7c52e-6f17-45da-94ad-55cb1fab21a0\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1582219171072</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1582219171072</updated>\r\n      <workItem from=\"1582219174175\" duration=\"3517000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"add reading\">\r\n      <created>1582223233232</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1582223233232</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TimeTrackingManager\">\r\n    <option name=\"totallyTimeSpent\" value=\"3517000\" />\r\n  </component>\r\n  <component name=\"ToolWindowManager\">\r\n    <frame x=\"-7\" y=\"-7\" width=\"2575\" height=\"1415\" extended-state=\"6\" />\r\n    <editor active=\"true\" />\r\n    <layout>\r\n      <window_info id=\"Favorites\" side_tool=\"true\" />\r\n      <window_info active=\"true\" content_ui=\"combo\" id=\"Project\" order=\"0\" visible=\"true\" weight=\"0.24990067\" />\r\n      <window_info id=\"Structure\" order=\"1\" side_tool=\"true\" weight=\"0.25\" />\r\n      <window_info anchor=\"bottom\" id=\"Docker\" show_stripe_button=\"false\" />\r\n      <window_info anchor=\"bottom\" id=\"Database Changes\" />\r\n      <window_info anchor=\"bottom\" id=\"Version Control\" />\r\n      <window_info anchor=\"bottom\" id=\"Python Console\" />\r\n      <window_info anchor=\"bottom\" id=\"Terminal\" />\r\n      <window_info anchor=\"bottom\" id=\"Event Log\" side_tool=\"true\" />\r\n      <window_info anchor=\"bottom\" id=\"Jupyter\" visible=\"true\" weight=\"0.32943925\" />\r\n      <window_info anchor=\"bottom\" id=\"Message\" order=\"0\" />\r\n      <window_info anchor=\"bottom\" id=\"Find\" order=\"1\" />\r\n      <window_info anchor=\"bottom\" id=\"Run\" order=\"2\" />\r\n      <window_info anchor=\"bottom\" id=\"Debug\" order=\"3\" weight=\"0.4\" />\r\n      <window_info anchor=\"bottom\" id=\"Cvs\" order=\"4\" weight=\"0.25\" />\r\n      <window_info anchor=\"bottom\" id=\"Inspection\" order=\"5\" weight=\"0.4\" />\r\n      <window_info anchor=\"bottom\" id=\"TODO\" order=\"6\" />\r\n      <window_info anchor=\"right\" id=\"SciView\" />\r\n      <window_info anchor=\"right\" id=\"Database\" />\r\n      <window_info anchor=\"right\" id=\"Commander\" internal_type=\"SLIDING\" order=\"0\" type=\"SLIDING\" weight=\"0.4\" />\r\n      <window_info anchor=\"right\" id=\"Ant Build\" order=\"1\" weight=\"0.25\" />\r\n      <window_info anchor=\"right\" content_ui=\"combo\" id=\"Hierarchy\" order=\"2\" weight=\"0.25\" />\r\n    </layout>\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"1\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"add reading\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"add reading\" />\r\n  </component>\r\n  <component name=\"editorHistoryManager\">\r\n    <entry file=\"file://$PROJECT_DIR$/ant_colony.ipynb\">\r\n      <provider selected=\"true\" editor-type-id=\"jupyter-editor\" />\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/2020/data/a_example.txt\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/2020/main.ipynb\">\r\n      <provider selected=\"true\" editor-type-id=\"jupyter-editor\" />\r\n    </entry>\r\n    <entry file=\"file://$PROJECT_DIR$/2020/read.py\">\r\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\r\n        <state relative-caret-position=\"201\">\r\n          <caret line=\"15\" lean-forward=\"true\" selection-start-line=\"15\" selection-end-line=\"15\" />\r\n          <folding>\r\n            <element signature=\"e#9#27#0\" expanded=\"true\" />\r\n          </folding>\r\n        </state>\r\n      </provider>\r\n    </entry>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 322351e6fb1240c83c0da6b189bd2c322323d437)
++++ b/.idea/workspace.xml	(date 1614281224998)
+@@ -2,40 +2,14 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="9aa7c52e-6f17-45da-94ad-55cb1fab21a0" name="Default Changelist" comment="">
+-      <change afterPath="$PROJECT_DIR$/2020/read.py" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/2021/a_out.txt" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/2021/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/2021/main.py" afterDir="false" />
+     </list>
+-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FileEditorManager">
+-    <leaf>
+-      <file pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/2020/main.ipynb">
+-          <provider selected="true" editor-type-id="jupyter-editor" />
+-        </entry>
+-      </file>
+-      <file pinned="false" current-in-tab="true">
+-        <entry file="file://$PROJECT_DIR$/2020/read.py">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="201">
+-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+-              <folding>
+-                <element signature="e#9#27#0" expanded="true" />
+-              </folding>
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/2020/data/a_example.txt">
+-          <provider selected="true" editor-type-id="text-editor" />
+-        </entry>
+-      </file>
+-    </leaf>
+   </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+@@ -62,6 +36,7 @@
+     <option name="width" value="2880" />
+     <option name="height" value="1575" />
+   </component>
++  <component name="ProjectId" id="1oyxvxSC2XhIgMwi6lPnIIfMp3W" />
+   <component name="ProjectView">
+     <navigator proportions="" version="1">
+       <foldersAlwaysOnTop value="true" />
+@@ -85,6 +60,10 @@
+       </pane>
+       <pane id="Scope" />
+     </panes>
++  </component>
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
+   </component>
+   <component name="PropertiesComponent">
+     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+@@ -94,18 +73,36 @@
+     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+   </component>
+-  <component name="RunDashboard">
+-    <option name="ruleStates">
++  <component name="RunManager">
++    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
++      <module name="google_hashcode" />
++      <option name="INTERPRETER_OPTIONS" value="" />
++      <option name="PARENT_ENVS" value="true" />
++      <envs>
++        <env name="PYTHONUNBUFFERED" value="1" />
++      </envs>
++      <option name="SDK_HOME" value="C:\Users\pschanner\AppData\Local\Programs\Python\Python37\python.exe" />
++      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2021" />
++      <option name="IS_MODULE_SDK" value="false" />
++      <option name="ADD_CONTENT_ROOTS" value="true" />
++      <option name="ADD_SOURCE_ROOTS" value="true" />
++      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
++      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2021/main.py" />
++      <option name="PARAMETERS" value="" />
++      <option name="SHOW_COMMAND_LINE" value="false" />
++      <option name="EMULATE_TERMINAL" value="false" />
++      <option name="MODULE_MODE" value="false" />
++      <option name="REDIRECT_INPUT" value="false" />
++      <option name="INPUT_FILE" value="" />
++      <method v="2" />
++    </configuration>
++    <recent_temporary>
+       <list>
+-        <RuleState>
+-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+-        </RuleState>
+-        <RuleState>
+-          <option name="name" value="StatusDashboardGroupingRule" />
+-        </RuleState>
++        <item itemvalue="Python.main" />
+       </list>
+-    </option>
++    </recent_temporary>
+   </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+@@ -117,6 +114,7 @@
+       <option name="presentableId" value="Default" />
+       <updated>1582219171072</updated>
+       <workItem from="1582219174175" duration="3517000" />
++      <workItem from="1614272869300" duration="3878000" />
+     </task>
+     <task id="LOCAL-00001" summary="add reading">
+       <created>1582223233232</created>
+@@ -160,11 +158,14 @@
+     </layout>
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+-    <option name="version" value="1" />
++    <option name="version" value="3" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="add reading" />
+     <option name="LAST_COMMIT_MESSAGE" value="add reading" />
++  </component>
++  <component name="com.intellij.coverage.CoverageDataManagerImpl">
++    <SUITE FILE_PATH="coverage/google_hashcode$main.coverage" NAME="main Coverage Results" MODIFIED="1614281055572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2021" />
+   </component>
+   <component name="editorHistoryManager">
+     <entry file="file://$PROJECT_DIR$/ant_colony.ipynb">
+Index: 2021/main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n\r\n#%%\r\n\r\nfilename = 'e'\r\n\r\n\r\nclass Street():\r\n    def __init__(self, start, end, name, time_needed):\r\n        self.start =start\r\n        self.end = end\r\n        self.name = name\r\n        self.time_needed = time_needed\r\n\r\nclass Car():\r\n    def __init__(self, id, path):\r\n        self.id = id\r\n        self.path = path\r\n\r\nstreets = []\r\ncars = []\r\n\r\n#%%\r\n\r\nwith open('{}.txt'.format(filename), 'r') as infile: \r\n\r\n    total_duration, n_intersections, n_streets, n_cars, bonus_points = map(int, infile.readline().split())\r\n\r\n    for _ in range(n_streets):\r\n        start, end, name, time_needed = infile.readline().split()\r\n        streets.append(Street(int(start), int(end), name, int(time_needed)))\r\n    for i in range(n_cars):\r\n        car_data = infile.readline().split()\r\n        cars.append(\r\n            Car(i, car_data[1:])\r\n        )\r\n\r\ncars\r\n\r\n#%%\r\n\"\"\"\r\n\r\nfor car in cars:\r\n    car.total_duration = sum([streets[idx].time_needed for idx in streets])\r\n\r\ncars[1].__dict__\r\n\"\"\"\r\n\r\n#%%\r\n\r\nintersections = {}\r\nfor i in range(n_intersections):\r\n    intersections[i] = {\r\n        'incoming': [],\r\n        'outgoing': []}\r\n\r\nfor street in streets: \r\n    intersections[street.start]['outgoing'].append(street)\r\n    intersections[street.end]['incoming'].append(street)\r\n\r\nintersections\r\n\r\n#%%\r\n\r\nschedule = []\r\n\r\n\r\nfor idx in intersections: \r\n    if len(intersections[idx]['incoming']) == 1:\r\n        schedule.append(\r\n            (idx, intersections[idx]['incoming'][0].name, 1))\r\n\r\nschedule\r\n\r\n\r\n#%%\r\n\r\noutput = []\r\noutput.append(\r\n    str(len(schedule)))\r\n\r\nfor s in schedule: \r\n    output.append(str(s[0]))\r\n    output.append('1')\r\n    output.append(' '.join(map(str, s[1:])))\r\n\r\noutput\r\n\r\n\r\n#%%\r\n\r\nout_filepath = filename + '_out'\r\n\r\nwith open('{}.txt'.format(out_filepath), \"w\") as outfile:\r\n    outfile.write(\"\\n\".join(output))\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/2021/main.py b/2021/main.py
+--- a/2021/main.py	(revision 322351e6fb1240c83c0da6b189bd2c322323d437)
++++ b/2021/main.py	(date 1614281276337)
+@@ -2,7 +2,7 @@
+ 
+ #%%
+ 
+-filename = 'e'
++filename = 'a'
+ 
+ 
+ class Street():
+@@ -61,6 +61,25 @@
+ intersections
+ 
+ #%%
++popularity = {}
++
++def add_to_dict(name: str):
++    if name in popularity:
++        popularity[name]+=1
++    else:
++        popularity[name] = 1
++
++
++def get_most_popular_street(streets):
++
++    for street in streets:
++        [add_to_dict(street.name) for car in cars if street.name in car.path]
++
++    return streets
++
++get_most_popular_street(streets)
++print(popularity)
++#%%
+ 
+ schedule = []
+ 
+@@ -69,6 +88,9 @@
+     if len(intersections[idx]['incoming']) == 1:
+         schedule.append(
+             (idx, intersections[idx]['incoming'][0].name, 1))
++    else:
++        popularity_dict = get_most_popular_street(intersections[idx]['incoming'])
++        intersections[idx]['incoming']
+ 
+ schedule
+ 
+Index: 2021/a_out.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/2021/a_out.txt b/2021/a_out.txt
+deleted file mode 100644
+--- a/2021/a_out.txt	(revision 322351e6fb1240c83c0da6b189bd2c322323d437)
++++ /dev/null	(revision 322351e6fb1240c83c0da6b189bd2c322323d437)
+@@ -1,10 +0,0 @@
+-3
+-0
+-1
+-rue-de-londres 1
+-2
+-1
+-rue-de-moscou 1
+-3
+-1
+-rue-de-rome 1
+\ No newline at end of file
