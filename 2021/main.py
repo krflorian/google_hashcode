@@ -2,7 +2,7 @@
 
 #%%
 
-filename = 'f'
+filename = 'b'
 
 
 class Street():
@@ -19,6 +19,7 @@ class Car():
 
 streets = []
 cars = []
+
 
 #%%
 
@@ -38,13 +39,56 @@ with open('{}.txt'.format(filename), 'r') as infile:
 cars
 
 #%%
-"""
+
+streets_dict = {}
+
+for street in streets: 
+    streets_dict[street.name] = street.time_needed
+streets_dict
+
+
+#%%
 
 for car in cars:
-    car.total_duration = sum([streets[idx].time_needed for idx in streets])
+    car.total_duration = sum([streets_dict[street] for street in car.path[1:]])
 
 cars[1].__dict__
-"""
+
+#%%
+
+import pandas as pd 
+
+car_values = pd.DataFrame()
+
+for car in cars:
+    car_values = car_values.append(pd.DataFrame({
+        'id': car.id, 
+        'total_duration': car.total_duration
+    }, index = [car.id]))
+
+car_values
+
+#%%
+
+car_values = car_values.loc[car_values['total_duration'] <= total_duration]
+
+car_values = car_values.sort_values('total_duration', ascending = True)
+
+if len(cars) > 100:
+    car_values = car_values.iloc[:int(len(cars)/10)]
+
+car_values
+
+#%%
+
+high_value_streets = set()
+
+for car in cars: 
+    if car.id in list(car_values.index):
+        for street in car.path: 
+            high_value_streets.add(street)
+
+high_value_streets
 
 #%%
 
