@@ -2,7 +2,7 @@
 
 #%%
 
-filename = 'e'
+filename = 'f'
 
 
 class Street():
@@ -68,7 +68,13 @@ schedule = []
 for idx in intersections: 
     if len(intersections[idx]['incoming']) == 1:
         schedule.append(
-            (idx, intersections[idx]['incoming'][0].name, 1))
+            (idx, [(intersections[idx]['incoming'][0].name, 1)]))
+    else:
+        # Raphael explains later
+        multi_streets = []
+        for thing in intersections[idx]['incoming']:
+            multi_streets.append((thing.name, 1))
+        schedule.append((idx, multi_streets))
 
 schedule
 
@@ -81,8 +87,9 @@ output.append(
 
 for s in schedule: 
     output.append(str(s[0]))
-    output.append('1')
-    output.append(' '.join(map(str, s[1:])))
+    output.append(str(len(s[1])))
+    for beautiful_street in s[1]:
+        output.append(' '.join(map(str, beautiful_street)))
 
 output
 
